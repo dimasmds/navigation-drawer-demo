@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
+}
+
+body {
+   margin: 0 auto;
+   color: #3e3e46;
+   background-color: #e3e3e7;
+   font-family:  sans-serif;
+   max-width: 1200px;
+}
+
+header {
+   padding: 12px;
+   display: flex;
+   align-items: center;
+ }
+
+ header .button-drawer {
+   width: 44px;
+   height: 44px;
+   background-color: transparent;
+   border: 0;
+   font-size: 24px;
+   color: black;
+   cursor: pointer;
+ }
+
+ header .brand {
+   margin-left: 8px;
+   width: 200px;
+ }
+
+ header .drawer {
+   width: 200px;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: -250px;
+   background-color: #2c3d50;
+   transition: 0.3s ease-in-out left;
+ }
+
+ .drawer .navigations .navigation-item  {
+   list-style-type: none;
+ }
+
+ .drawer .navigations .navigation-item a  {
+   color: white;
+   display: inline-block;
+   width: 100%;
+   padding: 8px 16px;
+   text-decoration: none;
+ }
+
+ .drawer.open {
+   left: 0;
+ }
+
+ main {
+   width: 100vw;
+   height: 50vh;
+ }
+
+ @media screen and (min-width: 900px) {
+   .button-drawer {
+       display: none;
+   }
+
+   header .drawer {
+       position: static;
+       background-color: transparent;
+       height: auto;
+       flex-grow: 1;
+       text-align: right;
+     }
+
+     .drawer .navigations .navigation-item {
+       margin: 0 6px;
+       display: inline-block;
+     }
+
+     header .drawer .navigations .navigation-item  a {
+       color: #3e3e46;
+       text-transform: uppercase;
+       font-weight: bold;
+     }
+ }
