@@ -1,4 +1,4 @@
-const buttonDrawer = document.getElementById('buttonDrawer');
+const buttonDrawer = document.querySelector('#buttonDrawer');
 const navDrawer = document.querySelector('#navDrawer');
 const main = document.querySelector('main');
 
